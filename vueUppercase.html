@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.js"></script>
+</head>
+<body>
+ <div id="app">	
+	<p>{{myStr}}</p>
+	<p>{{myStr2}}</p>
+	<button @click="myFunction()">Convert to Uppercase</button>
+</div>
+<script>
+ new Vue({
+el: '#app',
+  
+  data: { 
+	  myStr:"Hi... Good Evening !!",
+	  myStr2:""
+  },
+  
+   methods:{
+    myFunction: function () {	
+		this.myStr2 = this.myStr.toUpperCase();
+    }
+   }
+
+});
+</script>  
+      
+</body>
+</html>
